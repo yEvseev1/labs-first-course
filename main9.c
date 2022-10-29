@@ -33,26 +33,24 @@ int NextL(int i, int j, int l,int k) {
 }
 
 int Checker(int i, int j) {
-    if(((i >= 5) && (i <=15)) && ((j <= -5)&&(j >= -15))){
-        return 1;
-    }
-    return 0;
+    return ((i >= 5) && (i <= 15)) && ((j <= - 5)&&(j >= - 15));
 }
 
 int Counter() {
     int iPrev = I0;
     int jPrev = J0;
     int lPrev = L0;
+        
     for (int k = 0; k < 50; ++k) {
-    if (Checker(iPrev,jPrev)) {
-        return k;
-    } else {
+        if (Checker(iPrev,jPrev)) {
+            return k;
+        } else {
         int i = NextI(iPrev, jPrev, lPrev,k);
         int j = NextJ(iPrev, jPrev, lPrev, k);
         int l = NextL(iPrev, jPrev, lPrev,k);
         iPrev = i;
         jPrev = j;
-        lPrev = l;
+        lPrev = l;  
         }
     }
     return 0;
