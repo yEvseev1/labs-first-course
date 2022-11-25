@@ -3,21 +3,31 @@
 
 int main(){
     setlocale(LC_ALL,"rus");
-    int numb = 0, flag = 0, dg;
+    int numb = 0, flag = 0,flag1 = 0, dg;
     char a = '0';
     printf("Введите число: \n");
-    while (a != '\n') {
+    while (a != EOF) {
         a = getchar();
-        if ( (a < '0'|| a > '9') && (a < 'A' || a > 'F') && (a != ' ' && a != ',' && a != '\n' && a != '\t') ) flag = 1;
+        if ( (a < '0'|| a > '9') && (a < 'A' || a > 'F') && (a != ' ' && a != ',' && a != '\n' && a != '\t' && a != '-') ) flag = 1;
+        if (a == '-') flag1 = 1;
         if (a == ' ' || a == ',' || a == '\n' || a == '\t') {
             if (flag == 1) { 
                 printf("Это не число.\n");
             }
+            if(flag == 0) {
+        if(flag1 == 1){
+            printf("Полученное число: -%d\n",numb);
+            flag1 =0;
+        } else {
+            printf("Полученное число: %d\n",numb);
+        }
+        numb = 0;
+    }
         }
         if (a >= '0' && a <= '9') {
             dg = (int)(a - '0');
             numb = numb * 10 + ((dg % 10) % 2 == 0 ? ((dg % 10 - 1) + 10) % 10 : dg % 10);   
         }
+        
     }
-    if(flag == 0) printf("Полученное число: %d\n",numb);
 }
