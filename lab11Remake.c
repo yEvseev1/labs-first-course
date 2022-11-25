@@ -3,7 +3,7 @@
 
 int main(){ 
     setlocale(LC_ALL,"Rus");
-    char a;
+    char a = '0';
     int flag = 0;
     int n1 = 0, n0, x, flag1 = 0;
     printf("Введите любые числа\n");
