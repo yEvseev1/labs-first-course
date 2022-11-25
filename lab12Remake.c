@@ -16,7 +16,7 @@ int main(){
         }
         if (a >= '0' && a <= '9') {
             dg = (int)(a - '0');
-            numb = numb * 10 + ((dg % 10) % 2 == 0 ? dg % 10 - 1 : dg % 10);   
+            numb = numb * 10 + ((dg % 10) % 2 == 0 ? ((dg % 10 - 1) + 10) % 10 : dg % 10);   
         }
     }
     if(flag == 0) printf("Полученное число: %d\n",numb);
