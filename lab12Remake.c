@@ -4,7 +4,7 @@
 int main(){
     setlocale(LC_ALL,"rus");
     int numb = 0, flag = 0, dg;
-    char a;
+    char a = '0';
     printf("Введите число: \n");
     while (a != '\n') {
         a = getchar();
