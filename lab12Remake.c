@@ -8,12 +8,8 @@ int main(){
     printf("Введите число: \n");
     while (a != EOF) {
         a = getchar();
-        if ( (a < '0'|| a > '9') && (a < 'A' || a > 'F') && (a != ' ' && a != ',' && a != '\n' && a != '\t' && a != '-') ) flag = 1;
         if (a == '-') flag1 = 1;
-        if (a == ' ' || a == ',' || a == '\n' || a == '\t') {
-            if (flag == 1) { 
-                printf("Это не число.\n");
-            }
+        if (a == ' ' || a == ',' || a == '\n' || a == '\t' || a == EOF) {
             if(flag == 0) {
         if(flag1 == 1){
             printf("Полученное число: -%d\n",numb);
