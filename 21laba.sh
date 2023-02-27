@@ -8,3 +8,4 @@ for val in "${newarr[@]}";
 do
  echo "$val"
 done
+
