@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# String
 text=$(<~/text/text.txt)
 
 IFS=$1
