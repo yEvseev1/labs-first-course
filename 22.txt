@@ -1,0 +1,78 @@
+\documentclass[10pt]{article}
+\usepackage[english,russian]{babel}
+\usepackage[a5paper,top=54pt,bottom=54pt,left=48pt,right=48pt]{geometry}
+\usepackage{ textcomp }
+\usepackage{amsmath}
+\usepackage{ tipa }
+\usepackage{mathtools}
+
+\DeclareMathOperator*\lowlim{\underline{lim}}
+\DeclareMathOperator*\uplim{\overline{lim}}
+
+\pagestyle{myheadings}
+\def\@oddhead{\hfil\thepage}
+
+\date{}
+
+\begin{document}
+\setcounter{page}{11}
+\begin{center}
+    \textbf{\textsection 2. Теория последовательностей}
+\end{center}
+
+    \textbf{1.Понятие предела последовательности.} Говорят, что последовательность
+$x_{1}$, $x_{2}$ ,..., $x_{n}$, ... имеет своим пределом число $a$(короче, сходится к $a$), т.е.
+        $$\lim\limits_{n \to \infty} x_n = a,$$
+если для любого \textepsilon \ > 0 существует число $N$ = $N$(\textepsilon) такое,что
+$$|x_n-a|<\varepsilon ,  n > N$$ \par
+В частности, $x_n$ называется \textit{бесконечно малой}, если
+ $$\lim\limits_{x \to \infty} x_n = 0.$$
+ Последовательность, не имеющая предела, называется \textit{расходящейся}.\par 
+ \textbf{2.Признаки существования предела.}\par
+ 1)Если $$y_n \leq x_n \leq z_n$$
+ и $$\lim\limits_{n \to \infty} y_n = \lim\limits_{n \to \infty} z_n = c ,$$
+ то
+$$\lim\limits_{n \to \infty} x_n = c ,$$\par
+2)Монотонная и ограниченная функция имеет предел.\par
+3)\textit{Критерий Коши}. Для существования предела последовательности $x_n$ необходимо и достаточно чтобы для любого \textepsilon\  > 0 существовало $N$ = $N$(\textepsilon) такое, что
+$$|x_n - x_{n+p}| < \epsilon$$ \par
+\textbf{3.Основные теоремы о пределах последовательности.} Предполагая ,что существуют 
+$$\lim\limits_{n \to \infty} x_n  \lim\limits_{n \to \infty} y_n $$
+имеем:\par
+1)если $x_n \leq y_n$, то $\lim\limits_{n \to \infty} x_n$ \leq $\lim\limits_{n \to \infty} y_n$; \par
+2)$\lim\limits_{n \to \infty} (x_n \pm y_n)$ = $\lim\limits_{n \to \infty} x_n \pm \lim\limits_{n \to \infty} y_n$; \par
+3)$\lim\limits_{n \to \infty} (x_n  y_n)$ = $\lim\limits_{n \to \infty} x_n \lim\limits_{n \to \infty} y_n$;\par
+4)$\lim\limits_{n \to \infty} \frac{x_n}{y_n}$ = $\frac{\lim\limits_{n \to \infty} x_n}{\lim\limits_{n \to \infty} y_n}$,если $\lim\limits_{n \to \infty} y_n$ \neq 0; \newpage
+\textbf{4.Число е.} Последовательность
+$$\Bigg(1+\frac{1}{n}\Bigg)^n (n=1,2,...)$$
+имеет конечный предел
+$$\lim\limits_{n \to \infty} \Bigg(1+\frac{1}{n}\Bigg)^n = e = 2,718 281 8284... $$\par
+\textbf{5.Бесконечный предел.} Символическая запись 
+$$\lim\limits_{n \to \infty} x_n = \infty$$
+обозначает, что каково бы ни было $E > 0$, существует $N = N(E)$\\
+такое, что
+$$|x_n| > E, n > N. $$\par
+\textbf{6.Предельная точка.} Число $\xi$ (или символ $\infty$) называется 
+\textit{частичным пределом(предельной точкой)} данной последовательности $x_n$ \\
+(n = 1,2,...), если существует подпоследовательность
+$$ x_p_1 , x_p_2 ,..., x_p_2 , ... (1 \leq p_1 < p_2 < ...)$$
+такая, что
+$$\lim\limits_{n \to \infty} x_p_n = \xi$$ \par
+Всякая ограниченная последовательность имеет по меньшей мере один конечный частичный предел \textit{(принцип Больцано-Вейерштрасса).} Если 
+этот частичный предел единственный, то он же является конечным пределом данной последовательности.\par
+Наименьший частичный предел (конечный или бесконечный) последовательности $x_n$
+
+$$\lowlim_{n \to \infty}x_n$$
+называется \textit{нижним пределом}, а наибольший частичный предел ее
+
+$$\uplim_{n \to \infty}x_n$$
+называется \textit{верхним пределом} этой последовательности.\par
+Равенство 
+$$\uplim_{n \to \infty}x_n = \lowlim_{n \to \infty}x_n$$
+является необходимым и достаточным условием существования предела (конечного или бесконечного) последовательности $x_n$.
+
+
+
+
+
+\end{document}
