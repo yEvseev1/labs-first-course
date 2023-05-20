@@ -7,7 +7,7 @@
 int main(int argc, char *argv[]) {
     setlocale(LC_ALL, "rus");
     if (argc < 2) {
-        printf("Использование: программа входной_файл ключи\n");
+        printf("Использование: программа входной_файл\n");
         return 1;
     }
     person p;
@@ -40,3 +40,4 @@ int main(int argc, char *argv[]) {
     fclose(bin);
     return 0;
 }
+

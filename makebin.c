@@ -5,12 +5,12 @@
 #include <errno.h>
 #include "person.h"
 
-
 int main(int argc, char *argv[])
 {
     setlocale(LC_ALL, "rus");
-    if (argc < 3) {
-        printf("Использование: программа входной_файл выходной_файл ключ\n");
+    if (argc < 3)
+    {
+        printf("Использование: программа входной_файл выходной_файл\n");
         return 1;
     }
     person p;
@@ -20,13 +20,13 @@ int main(int argc, char *argv[])
     FILE *bin = fopen(argv[2], "wb");
     if (!in)
     {
-perror("Нельзя открыть файл");
-return 2;
+        perror("Нельзя открыть файл");
+        return 2;
     }
     if (!bin)
     {
-perror("Нельзя открыть файл");
-return 2;
+        perror("Нельзя открыть файл");
+        return 2;
     }
     while (fscanf(in, "%[^,],%[^,],%d,%d,%d,%d", p.name, p.gender, &p.ng, &p.linal, &p.matan, &p.VE) == 6)
     {
@@ -39,3 +39,4 @@ return 2;
     fclose(in);
     return 0;
 }
+

@@ -6,3 +6,4 @@ typedef struct {
     int linal, matan, VE ,ng;
 } person;
 #endif
+
