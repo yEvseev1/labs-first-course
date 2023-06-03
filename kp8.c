@@ -47,11 +47,7 @@ void DeleteKElem(List* list, int k){
         if (count % k == 0) {
             node* tmp = current;
             current = current->next;
-            if (prev == NULL) {
-                list->head -> next = current;
-            } else {
-                prev->next = current;
-            }
+            prev->next = current;
             free(tmp);
         } else {
             prev = current;
